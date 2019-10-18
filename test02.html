@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <style type="text/css">
+        body,
+        div,
+        main,
+        section,
+        article,
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .state-info {
+            position: absolute;
+            left: 550px;
+        }
+        
+        .g_lank_total {
+            
+            position: absolute;
+            left: 900px;
+            
+        }
+        
+        div {
+            display: block;
+        }
+
+        .state-box {
+            width: 284px;
+            height: 231px;
+
+        }
+
+        .bar {
+            width: 284px;
+            height: 3px;
+            margin-bottom: 25px;
+            background: #00a8b3;
+            display: block;
+        }
+
+        .percent-rate {
+            width: 284px;
+            margin-bottom: 25px;
+        }
+
+        .total-amount {
+            width: 284px;
+            margin-bottom: 29px;
+        }
+
+        .total-suppoter {
+            width: 284px;
+
+        }
+
+        .btn-funding {
+            width: 284px;
+            height: 48px;
+            margin-bottom: 10px;
+            padding-top: 29px;
+
+        }
+
+        .btn_fund {
+            color: #fff;
+            background-color: #00a8b3;
+            border-color: #00a8b3;
+            text-align: center;
+            display: inline-block;
+            padding-top: .07em;
+            vertical-align: middle;
+            width: 100%;
+            height: 48px;
+            font-size: 17px;
+            border: 0;
+
+        }
+
+        .btn-wrap {
+            width: 284px;
+            height: 48px;
+        }
+
+        .btn-wrap-flex {
+            width: 100%;
+            ;
+            height: 38px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #btn-like.btn_info_like {
+            width: 121px;
+            height: 38px;
+            margin-right: 6px;
+            background: #fff;
+            border: 1px solid #dadce0;
+            flex: 1;
+        }
+
+        #btn-share.btn_info_share {
+            width: 121px;
+            height: 38px;
+            background: #fff;
+            border: 1px solid #dadce0;
+            color: #4a4a4a;
+            flex: 1;
+        }
+
+        .state-info {
+            display: block;
+            float: left;
+            margin-left: 20px;
+
+        }
+        .state-video {
+            display: block;
+            float: left
+        }
+
+        .state-info .state-box p strong {
+            font-size: 24px;
+        }
+
+        .state-info.state-box p {
+            font-size: 15px;
+        }
+
+        .state-info .state-box p.remain-day {
+            font-size: 28px;
+            font-weight: 500;
+            color: #4a4a4a;
+        }
+
+        .g_main_fund .g_lank_section:before {
+            position: absolute;
+            top: -40px;
+            bottom: -40px;
+            left: 0;
+            background-color: #f0f2f5;
+            width: 1px;
+            content: "";
+        }
+
+        .g_lank_section {
+            display: block;
+            
+            min-width: 427px;
+            max-width: 427px;
+            padding-left: 60px;
+
+        }
+
+        .g_lank_title h1 {
+            line-height: 36px;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        .g_lank_total
+        {
+            display: block;
+        }
+        .g_lank_list {
+            width: 270px;
+            height: 394px;
+        }
+
+        .g_lank_listitem1 {
+            width: 270px;
+            height: 66px;
+            margin-bottom: 16px;
+        }
+
+        .listitem_content {
+            box-sizing: border-box;
+            position: relative;
+            padding-left: 21px;
+            float: left;
+            display: block;
+            cursor: pointer;
+
+
+        }
+
+        .listitem_content_title {
+            margin-bottom: 3px;
+            overflow: hidden;
+            line-height: 20p;
+            font-size: 15px;
+            font-weight: 400;
+            word-break: break-all;
+            width: 100%;
+            text-overflow: ellipsis;
+        }
+
+        .listitem_box {
+            display: block;
+            vertical-align: baseline;
+            border-radius: 3px;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+
+        }
+
+        .listitem_content_subtag {
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .listitem_content_per {
+            display: inline-block;
+            margin-right: 6px;
+            color: #00a8b3;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .listitem_content_num {
+            line-height: 28px;
+            font-size: 21px;
+            font-weight: 700;
+            position: absolute;
+            letter-spacing: -0.3px;
+            float: left;
+            top: 0;
+            left: 0;
+
+        }
+
+        article {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .g_main_total {}
+
+        .state-video-img {
+            width: 550px;
+            height: 350px;
+            border: 1px solid black;
+            margin-top: 30px;
+        }
+
+        .state-video-title {
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        .state-content {
+            
+            float: left;
+          
+        }
+
+        .g_main_top
+        {
+            display: inline-block;
+            float: left;
+        }
+        .g_lank_total
+        {
+            display: block;
+            float: left; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g_main_total">
+       <div class="g_main_top">
+            <section class="g_main_fund">
+                <div class="state-content">
+                    <div class="state-video">
+                        <div class="state-video-img"></div>
+                        <div class="state-video-title">백팩의 새로운 역사! 2만원대 백팩[유닛백2]</div>
+                    </div>
+
+                    <div class="state-info">
+                        <div class="state-box">
+                            <p class="remain-day">12일 남음</p>
+                            <p class="bar"><em style="width:1242%;height: 3px;"></em></p>
+                            <p class="percent-rate"><strong>1248%</strong>달성</p>
+                            <p class="total-amount"><strong>6,212,100</strong>원 펀딩</p>
+                            <p class="total-suppoter"><strong>253</strong>명의 서포터</p>
+                        </div>
+                        <div class="btn-funding"><button class="btn_fund">펀딩하기</button></div>
+                        <div class="btn-wrap">
+                            <div class="btn-wrap-flex">
+                                <button id="btn-like" class="btn_info_like"><i class="icon-like"></i><em id="cntlike">34</em></button>
+                                <button id="btn-share" class="btn_info_share">공유하기</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="g_lank_section">
+
+                <div class="g_lank_total">
+                    <div class="g_lank_title">
+                        <h1>실시간 랭킹</h1>
+                    </div>
+                    <div class="g_lank_list">
+                        <div class="g_lank_listitem1">
+                            <a class="listitem_box">
+                                <article>
+                                    <div class="listitem_content">
+                                        <div class="listitem_content_num">1</div>
+                                        <h1 class="listitem_content_title">마진 0%! 백팩의 새로운 역사를 쓸 2만원대 백팩[유닛백]</h1>
+                                        <p class="listitem_content_subtag">
+                                            <span class="listitem_content_per">2851%</span>
+                                            패션/잡화
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="g_lank_listitem1">
+                            <a class="listitem_box">
+                                <article>
+                                    <div class="listitem_content">
+                                        <div class="listitem_content_num">2</div>
+                                        <h1 class="listitem_content_title">마진 0%! 백팩의 새로운 역사를 쓸 2만원대 백팩[유닛백]</h1>
+                                        <p class="listitem_content_subtag">
+                                            <span class="listitem_content_per">2851%</span>
+                                            패션/잡화
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="g_lank_listitem1">
+                            <a class="listitem_box">
+                                <article>
+                                    <div class="listitem_content">
+                                        <div class="listitem_content_num">3</div>
+                                        <h1 class="listitem_content_title">마진 0%! 백팩의 새로운 역사를 쓸 2만원대 백팩[유닛백]</h1>
+                                        <p class="listitem_content_subtag">
+                                            <span class="listitem_content_per">2851%</span>
+                                            패션/잡화
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="g_lank_listitem1">
+                            <a class="listitem_box">
+                                <article>
+                                    <div class="listitem_content">
+                                        <div class="listitem_content_num">4</div>
+                                        <h1 class="listitem_content_title">마진 0%! 백팩의 새로운 역사를 쓸 2만원대 백팩[유닛백]</h1>
+                                        <p class="listitem_content_subtag">
+                                            <span class="listitem_content_per">2851%</span>
+                                            패션/잡화
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="g_lank_listitem1">
+                            <a class="listitem_box">
+                                <article>
+                                    <div class="listitem_content">
+                                        <div class="listitem_content_num">5</div>
+                                        <h1 class="listitem_content_title">마진 0%! 백팩의 새로운 역사를 쓸 2만원대 백팩[유닛백]</h1>
+                                        <p class="listitem_content_subtag">
+                                            <span class="listitem_content_per">2851%</span>
+                                            패션/잡화
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body></html>
